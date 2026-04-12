@@ -1,26 +1,24 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+// Pages
+import Home from "./pages/Home"
+// (later)
+// import About from "./pages/About"
+// import Recruitment from "./pages/Recruitment"
 
 function App() {
   return (
-    <Card className="max-w-sm">
-      <CardHeader>
-        <CardTitle>Project Overview</CardTitle>
-        <CardDescription>
-          Track progress and recent activity for your Vite app.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>Your design system is ready. Start building your next component.</p>
-        <Button variant="default">Button</Button>
-      </CardContent>
-    </Card>
+    <Router>
+      <div className="bg-[#0B0F19] text-white min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          
+          {/* Add later */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/recruitment" element={<Recruitment />} /> */}
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
