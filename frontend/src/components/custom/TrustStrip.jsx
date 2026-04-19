@@ -21,7 +21,7 @@ const items = [
 
 const TrustStrip = () => {
   return (
-    <section className="py-16 md:py-20  border-t border-gray-800 bg-[#0B0F19]/60">
+    <section className="py-20 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <div className="grid md:grid-cols-3 gap-10">
@@ -38,16 +38,16 @@ const TrustStrip = () => {
                 className="flex items-start gap-5"
               >
                 {/* Icon */}
-                <div className="p-3 rounded-xl bg-[#111827] border border-gray-800">
-                  <Icon className="w-6 h-6 text-[#2563EB]" />
+                <div className="p-3 rounded-xl bg-white border border-gray-200 shadow-sm">
+                  <Icon className="w-6 h-6 text-blue-600" />
                 </div>
 
                 {/* Text */}
                 <div>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-400 mt-1 leading-relaxed max-w-xs">
+                  <p className="text-sm text-gray-600 mt-1 leading-relaxed max-w-xs">
                     {item.desc}
                   </p>
                 </div>

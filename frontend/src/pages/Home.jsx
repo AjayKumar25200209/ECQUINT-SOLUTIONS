@@ -5,19 +5,19 @@ import Services from "@/components/custom/Services"
 import Differentiator from "@/components/custom/Differentiator"
 import HowItWorks from "@/components/custom/HowItWorks"
 // import CTA from "@/components/custom/CTA"
-// import Footer from "@/components/custom/Footer"
+import Footer from "@/components/custom/Footer"
 
 const Home = () => {
   return (
-    <div className="bg-[#0B0F19] text-white">
+    <div className="">
       <Navbar />
       <Hero />
-      <TrustStrip />
+      {/* <TrustStrip /> */}
       <Services />
-      <Differentiator />
-      <HowItWorks />
+      {/* <Differentiator /> */}
+      {/* <HowItWorks /> */}
       {/* <CTA /> */}
-      {/* <Footer /> */}
+      <Footer />
 
 
 

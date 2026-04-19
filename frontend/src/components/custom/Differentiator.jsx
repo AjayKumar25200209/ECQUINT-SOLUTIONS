@@ -21,15 +21,15 @@ const steps = [
 
 const Differentiator = () => {
   return (
-    <section className="py-17">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Header */}
         <div className="max-w-xl mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-gray-900">
             Our Approach
           </h2>
-          <p className="text-gray-400 mt-3 text-sm">
+          <p className="text-gray-600 mt-3 text-sm">
             A hybrid model combining AI precision with human expertise to deliver better hiring outcomes.
           </p>
         </div>
@@ -38,7 +38,7 @@ const Differentiator = () => {
         <div className="relative">
 
           {/* Line */}
-          <div className="hidden md:block absolute top-6 left-0 right-0 h-[1px] bg-gray-800" />
+          <div className="hidden md:block absolute top-6 left-0 right-0 h-[1px] bg-gray-200" />
 
           <div className="grid md:grid-cols-3 gap-10 relative">
             {steps.map((step, index) => {
@@ -54,15 +54,15 @@ const Differentiator = () => {
                   className="relative"
                 >
                   {/* Circle */}
-                  <div className="w-12 h-12 rounded-full bg-[#111827] border border-gray-800 flex items-center justify-center mb-6 relative z-10">
-                    <Icon className="w-5 h-5 text-[#2563EB]" />
+                  <div className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 relative z-10 shadow-sm">
+                    <Icon className="w-5 h-5 text-blue-600" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-gray-900">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-400 mt-2 leading-relaxed max-w-xs">
+                  <p className="text-sm text-gray-600 mt-2 leading-relaxed max-w-xs">
                     {step.desc}
                   </p>
                 </motion.div>
