@@ -3,8 +3,8 @@ import Footer from "@/components/custom/Footer"
 
 import AboutHero from "@/components/custom/About/AboutHero"
 import AboutIntro from "@/components/custom/About/AboutIntro"
-import AboutValues from "@/components/custom/about/AboutValues"
-import AboutPresence from "@/components/custom/about/AboutPresence"
+import AboutValues from "@/components/custom/About/AboutValues"
+import AboutPresence from "@/components/custom/About/AboutPresence"
 
 
 const About = () => {

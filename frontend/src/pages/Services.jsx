@@ -1,5 +1,5 @@
-import ServiceHero from "@/components/Custom/ServiceHero"
-import Navbar from "@/components/Custom/Navbar";
+import ServiceHero from "@/components/custom/ServiceHero"
+import Navbar from "@/components/custom/Navbar";
 
 const services = [
   {
