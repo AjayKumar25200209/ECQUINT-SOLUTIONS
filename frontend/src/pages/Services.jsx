@@ -1,5 +1,7 @@
 import ServiceHero from "@/components/custom/ServiceHero"
 import Navbar from "@/components/custom/Navbar";
+import { useAccessibilityStore } from "@/store/accessibilityStore";
+import Footer from "@/components/custom/Footer";
 
 const services = [
   {
@@ -74,77 +76,127 @@ const services = [
     ],
     image: "/images/service6.jpg",
   },
-]
+];
 
 const Services = () => {
+  const { reduceMotion } = useAccessibilityStore();
+
   return (
     <div className="bg-white">
-        <Navbar />
-        <ServiceHero />
+      <Navbar />
+      <ServiceHero />
 
-      {services.map((service, index) => (
-        <section
-          key={index}
-          className="py-14 md:py-18 border-t border-gray-100"
-        >
-          <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <main>
+        {services.map((service, index) => {
+          const isEven = index % 2 === 0;
+          const sectionId = `service-${index}`;
 
-            {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          return (
+            <section
+              key={index}
+              aria-labelledby={sectionId}
+              className="py-12 md:py-16 border-t border-gray-100"
+            >
+              <div className="max-w-6xl mx-auto px-5 md:px-10">
 
-              {/* IMAGE (LEFT / RIGHT SWITCH) */}
-              {index % 2 === 0 && (
-                <div>
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-[260px] md:h-[320px] object-cover rounded-xl"
-                  />
+                <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+
+                  {/* IMAGE LEFT */}
+                  {isEven && (
+                    <div className="order-1 md:order-none">
+                      <img
+                        src={service.image}
+                        alt=""
+                        role="presentation"
+                        className="w-full h-[220px] sm:h-[260px] md:h-[320px] object-cover rounded-xl"
+                      />
+                    </div>
+                  )}
+
+                  {/* TEXT */}
+                  <div className="order-2 md:order-none">
+                    <h2
+                      id={sectionId}
+                      className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900"
+                    >
+                      {service.title}
+                    </h2>
+
+                    <p className="mt-1 text-[#e4332d] text-xs sm:text-sm font-medium tracking-wide">
+                      {service.subtitle}
+                    </p>
+
+                    <p className="mt-3 text-gray-600 text-sm sm:text-base leading-relaxed">
+                      {service.desc}
+                    </p>
+
+                    <ul
+                      className="mt-4 space-y-2"
+                      aria-label={`${service.title} key features`}
+                    >
+                      {service.points.map((point, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-gray-700 text-sm sm:text-base"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="text-[#e4332d] mt-1 text-xs"
+                          >
+                            ●
+                          </span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* 🔥 BUTTONS ONLY FOR TALENT SECTION */}
+                    {service.title === "Talent & Advisory Services" && (
+                      <div className="mt-6 flex flex-col sm:flex-row gap-3">
+
+                        <a
+                          href="/careers"
+                          className="inline-flex justify-center items-center px-5 py-2.5 rounded-lg bg-[#e4332d] text-white text-sm font-medium
+                          hover:bg-[#c92e28] focus:outline-none focus:ring-2 focus:ring-[#e4332d]/40 transition"
+                        >
+                          Explore Opportunities
+                        </a>
+
+                        <a
+                          href="/hire"
+                          className="inline-flex justify-center items-center px-5 py-2.5 rounded-lg border border-gray-300 text-gray-800 text-sm font-medium
+                          hover:border-[#e4332d] hover:text-[#e4332d] focus:outline-none focus:ring-2 focus:ring-[#e4332d]/30 transition"
+                        >
+                          Hire Talent
+                        </a>
+
+                      </div>
+                    )}
+
+                  </div>
+
+                  {/* IMAGE RIGHT */}
+                  {!isEven && (
+                    <div className="order-1 md:order-none">
+                      <img
+                        src={service.image}
+                        alt=""
+                        role="presentation"
+                        className="w-full h-[220px] sm:h-[260px] md:h-[320px] object-cover rounded-xl"
+                      />
+                    </div>
+                  )}
+
                 </div>
-              )}
-
-              {/* TEXT */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
-                  {service.title}
-                </h2>
-
-                <p className="mt-2 text-[#e4332d] text-sm font-medium">
-                  {service.subtitle}
-                </p>
-
-                <p className="mt-3 text-gray-600 text-sm md:text-base leading-relaxed">
-                  {service.desc}
-                </p>
-
-                <ul className="mt-4 space-y-2">
-                  {service.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
-                      <span className="text-[#e4332d] mt-1 text-xs">●</span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
               </div>
+            </section>
+          );
+        })}
+      </main>
 
-              {/* IMAGE RIGHT */}
-              {index % 2 !== 0 && (
-                <div>
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-[260px] md:h-[320px] object-cover rounded-xl"
-                  />
-                </div>
-              )}
-
-            </div>
-
-          </div>
-        </section>
-      ))}
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

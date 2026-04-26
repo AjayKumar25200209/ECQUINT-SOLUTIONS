@@ -141,16 +141,21 @@ export default function AccessibilityWidget() {
 function ToggleSwitch({ label, active, onClick }) {
   return (
     <div className="flex items-center justify-between">
-      <span>{label}</span>
+      <span className="text-gray-800">{label}</span>
+
       <button
         onClick={onClick}
-        className={`w-11 h-6 rounded-full relative transition ${
-          active ? "bg-[#e4332d]" : "bg-gray-300"
+        className={`w-11 h-6 rounded-full relative transition border ${
+          active
+            ? "bg-[#e4332d] border-[#e4332d]"
+            : "bg-gray-200 border-gray-400"
         }`}
       >
         <span
-          className={`absolute top-1 w-4 h-4 bg-white rounded-full transition ${
-            active ? "left-6" : "left-1"
+          className={`absolute top-1 w-4 h-4 rounded-full transition ${
+            active
+              ? "left-6 bg-white"
+              : "left-1 bg-white border border-gray-400"
           }`}
         />
       </button>

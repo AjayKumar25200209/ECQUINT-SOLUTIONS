@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hiring Request</title>
+</head>
+
+<body style="margin:0; padding:0; background:#f5f7fa; font-family:Arial, sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:20px;">
+    <tr>
+      <td align="center">
+
+        <!-- FULL WIDTH CONTAINER -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:800px; background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.06);">
+
+          <!-- HEADER -->
+          <tr>
+            <td style="background:#e4332d; padding:24px; color:#ffffff;">
+              <h2 style="margin:0; font-size:22px;">New Hiring Request</h2>
+              <p style="margin:6px 0 0; font-size:13px; opacity:0.9;">
+                A new client request has been submitted
+              </p>
+            </td>
+          </tr>
+
+          <!-- BODY -->
+          <tr>
+            <td style="padding:24px;">
+
+              <!-- GRID INFO -->
+              <table width="100%" cellpadding="0" cellspacing="0">
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Full Name</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{name}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Email</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{email}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Company</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{company}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Phone</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{phone}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Role Required</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{role}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Team Size</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{teamSize}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Timeline</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{timeline}}</td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 0; color:#888; font-size:13px;">Budget</td>
+                  <td style="padding:10px 0; text-align:right; font-weight:600;">{{budget}}</td>
+                </tr>
+
+              </table>
+
+              <!-- MESSAGE -->
+              <div style="margin-top:20px;">
+                <p style="font-size:13px; color:#888; margin-bottom:8px;">Requirement Details</p>
+
+                <div style="background:#f7f7f7; padding:16px; border-radius:8px; font-size:14px; color:#333; line-height:1.6;">
+                  {{message}}
+                </div>
+              </div>
+
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="padding:16px 24px; background:#fafafa; font-size:12px; color:#999;">
+              This email was generated automatically from your hiring form.
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
