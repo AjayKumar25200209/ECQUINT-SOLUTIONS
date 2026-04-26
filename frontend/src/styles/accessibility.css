@@ -1,0 +1,91 @@
+/* =========================
+   TEXT SIZE
+========================= */
+.text-normal { font-size: 16px; }
+.text-large { font-size: 18px; }
+.text-xlarge { font-size: 20px; }
+
+/* =========================
+   HIGH CONTRAST (GLOBAL)
+========================= */
+.contrast-high body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Text elements */
+.contrast-high h1,
+.contrast-high h2,
+.contrast-high h3,
+.contrast-high h4,
+.contrast-high h5,
+.contrast-high h6,
+.contrast-high p,
+.contrast-high span,
+.contrast-high li,
+.contrast-high label {
+  color: #fff;
+}
+
+/* Links */
+.contrast-high a {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+/* Cards / containers */
+.contrast-high .card,
+.contrast-high .bg-white,
+.contrast-high [class*="bg-gray"] {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Buttons */
+.contrast-high button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Selected state */
+.contrast-high .a11y-selected {
+  background-color: #e4332d !important;
+  color: #fff !important;
+  border-color: #e4332d !important;
+  outline: 2px solid #fff;
+}
+
+/* =========================
+   LINK HIGHLIGHT
+========================= */
+.highlight-links a {
+  background-color: yellow !important;
+  color: black !important;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.contrast-high.highlight-links a {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+/* =========================
+   REDUCE MOTION
+========================= */
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* =========================
+   CURSOR SIZE
+========================= */
+.cursor-large {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur116.cur'), auto;
+}
+
+.cursor-xlarge {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur117.cur'), auto;
+}

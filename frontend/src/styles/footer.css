@@ -1,0 +1,24 @@
+/* Footer accessibility */
+
+/* Text scaling */
+.text-large footer {
+  font-size: 1.05rem;
+}
+
+.text-xlarge footer {
+  font-size: 1.1rem;
+}
+
+/* Contrast mode */
+.contrast-high footer {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.contrast-high footer * {
+  color: #fff !important;
+}
+
+.contrast-high footer a {
+  color: #ffeb3b !important;
+}

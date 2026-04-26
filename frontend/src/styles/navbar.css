@@ -1,0 +1,15 @@
+/* Navbar accessibility */
+
+/* Ensure navbar visible in contrast */
+.contrast-high header {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.contrast-high header * {
+  color: #fff !important;
+}
+
+.contrast-high header a {
+  color: #ffeb3b !important;
+}

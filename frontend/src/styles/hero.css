@@ -1,0 +1,15 @@
+/* Hero accessibility */
+
+/* Remove image in contrast */
+.contrast-high section[role="banner"] {
+  background: #000 !important;
+}
+
+.contrast-high section[role="banner"] img {
+  display: none !important;
+}
+
+/* Ensure readable text */
+.contrast-high section[role="banner"] * {
+  color: #fff !important;
+}
